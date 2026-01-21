@@ -13,28 +13,57 @@ Manage, update, and discover Claude Code skills across multiple installation sou
 
 ## Installation
 
-Copy the `skills-updater` folder to your Claude Code skills directory:
+In Claude Code, simply ask it to clone and install:
 
-```bash
-cp -r skills-updater ~/.claude/skills/
+```
+Clone https://github.com/yizhiyanhua-ai/skills-updater to ~/.claude/skills/
 ```
 
-Or install via marketplace (if available):
+Or just say:
 
-```bash
-claude /install skills-updater@<marketplace>
+```
+Install the skills-updater skill
 ```
 
-## Quick Start
+## Usage
+
+After installation, trigger with natural language or commands in Claude Code:
 
 ### Check for Updates
 
-```bash
-python ~/.claude/skills/skills-updater/scripts/check_updates.py
+```
+Check for skill updates
 ```
 
-Output:
 ```
+/skills-updater
+```
+
+### Update a Marketplace
+
+```
+Update the anthropic-agent-skills marketplace
+```
+
+### Discover New Skills
+
+```
+Recommend some useful skills
+```
+
+```
+What are some popular skills?
+```
+
+## Examples
+
+**Example 1: Check for Updates**
+
+```
+You: Check for skill updates
+
+Claude: Checking for skill updates...
+
 📦 Installed Skills Status
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -42,66 +71,72 @@ Output:
    • skill-creator@daymade-skills (1.2.2)
    ...
 
-⬆️ Updates Available (2):
+⬆️ Updates Available (1):
    • document-skills@anthropic-agent-skills
      Local: e5c60158 → Remote: 69c0b1a0
 ```
 
-### Update Marketplace & Auto-Install
+**Example 2: Update and Auto-Install**
 
-```bash
-# Update marketplace and reinstall affected skills
-python ~/.claude/skills/skills-updater/scripts/update_marketplace.py anthropic-agent-skills --auto-install
+```
+You: Update the anthropic-agent-skills marketplace
+
+Claude:
+📡 Fetching remote updates...
+
+Current commit: e5c60158df67
+Remote commit: 69c0b1a06741
+Status: Behind by 6 commits
+
+📦 Affected skills: document-skills
+
+Confirm update? Enter 'yes' to proceed.
+
+You: yes
+
+Claude:
+📥 Updating marketplace: anthropic-agent-skills
+✅ Marketplace updated successfully
+✅ Reinstalled: document-skills
 ```
 
-### Discover New Skills
+**Example 3: Discover New Skills**
 
-```bash
-python ~/.claude/skills/skills-updater/scripts/recommend_skills.py
 ```
+You: Recommend some useful skills
+
+Claude:
+🔥 Trending Skills
+━━━━━━━━━━━━━━━━━━
+
+From skills.sh (Top 10):
+ 1. vercel-react-best-practices (25.5K installs)
+ 2. web-design-guidelines (19.2K installs)
+ ...
+
+💡 Personalized Recommendations
+Based on your installed skills:
+• playwright-skill - Browser automation testing
+• github-ops - GitHub CLI operations
+```
+
+## Trigger Summary
+
+| Feature | Natural Language | Command |
+|---------|------------------|---------|
+| Check updates | "Check for skill updates" | `/skills-updater` |
+| Update marketplace | "Update xxx marketplace" | - |
+| Skill recommendations | "Recommend some skills" | - |
+| Update all | "Update all skills" | - |
 
 ## Language Support
 
-Auto-detects from environment (`LANG`, `LC_ALL`), or specify manually:
-
-```bash
-# Chinese
-python scripts/check_updates.py --lang zh
-
-# English
-python scripts/check_updates.py --lang en
-```
-
-## Scripts
-
-| Script | Description |
-|--------|-------------|
-| `check_updates.py` | Scan and compare installed vs remote versions |
-| `update_marketplace.py` | Update marketplace repos and auto-reinstall skills |
-| `recommend_skills.py` | Fetch trending skills from marketplaces |
-| `i18n.py` | Internationalization module |
+Automatically displays in English or Chinese based on your system language. Claude Code will auto-detect your locale.
 
 ## Documentation
 
-See [SKILL.md](SKILL.md) for detailed documentation including:
-- Complete workflow guide
-- Version detection methods
-- Smart merge strategy
-- Error handling
-- Adding new languages
-
-## Supported Marketplaces
-
-See [references/marketplaces.md](references/marketplaces.md) for the full list.
-
-**Official:**
-- `anthropics/skills` - Anthropic example skills
-- `anthropics/claude-plugins-official` - Official plugins
-
-**Community:**
-- `daymade/claude-code-skills` - Community skills
-- `obra/superpowers-marketplace` - Extended capabilities
-- `skills.sh` - npx skills leaderboard
+- [SKILL.md](SKILL.md) - Complete skill documentation
+- [references/marketplaces.md](references/marketplaces.md) - Supported marketplaces list
 
 ## License
 

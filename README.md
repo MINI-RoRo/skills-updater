@@ -13,28 +13,57 @@
 
 ## 安装
 
-将 `skills-updater` 文件夹复制到 Claude Code 技能目录：
+在 Claude Code 中输入以下命令，自动克隆并安装：
 
-```bash
-cp -r skills-updater ~/.claude/skills/
+```
+帮我把 https://github.com/yizhiyanhua-ai/skills-updater 克隆到 ~/.claude/skills/ 目录
 ```
 
-或通过 marketplace 安装（如可用）：
+或者直接说：
 
-```bash
-claude /install skills-updater@<marketplace>
+```
+安装 skills-updater 技能
 ```
 
-## 快速开始
+## 使用方法
 
-### 检查更新
+安装完成后，在 Claude Code 中用自然语言或命令触发：
 
-```bash
-python ~/.claude/skills/skills-updater/scripts/check_updates.py
+### 检查技能更新
+
+```
+检查 skills 更新
 ```
 
-输出示例：
 ```
+/skills-updater
+```
+
+### 更新指定市场
+
+```
+更新 anthropic-agent-skills 市场
+```
+
+### 发现新技能
+
+```
+推荐一些好用的 skills
+```
+
+```
+有什么热门技能推荐？
+```
+
+## 使用示例
+
+**示例 1：检查更新**
+
+```
+你：检查 skills 更新
+
+Claude：正在检查技能更新...
+
 📦 已安装技能状态
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -42,20 +71,17 @@ python ~/.claude/skills/skills-updater/scripts/check_updates.py
    • skill-creator@daymade-skills (1.2.2)
    ...
 
-⬆️ 有可用更新 (2):
+⬆️ 有可用更新 (1):
    • document-skills@anthropic-agent-skills
      本地: e5c60158 → 远程: 69c0b1a0
 ```
 
-### 更新市场并自动安装
+**示例 2：更新并自动安装**
 
-```bash
-# 更新市场仓库并重新安装受影响的技能
-python ~/.claude/skills/skills-updater/scripts/update_marketplace.py anthropic-agent-skills --auto-install
 ```
+你：更新 anthropic-agent-skills 市场
 
-输出示例：
-```
+Claude：
 📡 正在获取远程更新...
 
 当前提交: e5c60158df67
@@ -64,61 +90,53 @@ python ~/.claude/skills/skills-updater/scripts/update_marketplace.py anthropic-a
 
 📦 受影响的技能: document-skills
 
+是否要更新？输入「是」确认。
+
+你：是
+
+Claude：
 📥 正在更新市场: anthropic-agent-skills
 ✅ 市场更新成功
-
-🔄 正在重新安装受影响的技能...
-   ✅ 已安装: document-skills
+✅ 已重新安装: document-skills
 ```
 
-### 发现新技能
+**示例 3：发现新技能**
 
-```bash
-python ~/.claude/skills/skills-updater/scripts/recommend_skills.py
 ```
+你：推荐一些好用的 skills
+
+Claude：
+🔥 热门技能
+━━━━━━━━━━━━━━━━━━
+
+来自 skills.sh (前 10 名):
+ 1. vercel-react-best-practices (25.5K 次安装)
+ 2. web-design-guidelines (19.2K 次安装)
+ ...
+
+💡 个性化推荐
+基于您已安装的技能:
+• playwright-skill - 浏览器自动化测试
+• github-ops - GitHub CLI 操作
+```
+
+## 触发方式汇总
+
+| 功能 | 自然语言 | 命令 |
+|------|----------|------|
+| 检查更新 | "检查 skills 更新" | `/skills-updater` |
+| 更新市场 | "更新 xxx 市场" | - |
+| 技能推荐 | "推荐一些 skills" | - |
+| 更新全部 | "更新所有 skills" | - |
 
 ## 语言支持
 
-自动从环境变量检测（`LANG`、`LC_ALL`），或手动指定：
-
-```bash
-# 中文
-python scripts/check_updates.py --lang zh
-
-# 英文
-python scripts/check_updates.py --lang en
-```
-
-## 脚本说明
-
-| 脚本 | 功能 |
-|------|------|
-| `check_updates.py` | 扫描并对比已安装与远程版本 |
-| `update_marketplace.py` | 更新市场仓库并自动重装技能 |
-| `recommend_skills.py` | 获取热门技能推荐 |
-| `i18n.py` | 国际化模块 |
+自动根据系统语言显示中文或英文。Claude Code 会自动检测您的语言环境。
 
 ## 详细文档
 
-查看 [SKILL.md](SKILL.md) 获取完整文档，包括：
-- 完整工作流指南
-- 版本检测方法
-- 智能合并策略
-- 错误处理
-- 添加新语言
-
-## 支持的市场
-
-查看 [references/marketplaces.md](references/marketplaces.md) 获取完整列表。
-
-**官方：**
-- `anthropics/skills` - Anthropic 示例技能
-- `anthropics/claude-plugins-official` - 官方插件
-
-**社区：**
-- `daymade/claude-code-skills` - 社区技能集合
-- `obra/superpowers-marketplace` - 扩展能力
-- `skills.sh` - npx 技能排行榜
+- [SKILL.md](SKILL.md) - 完整技能文档
+- [references/marketplaces.md](references/marketplaces.md) - 支持的市场列表
 
 ## 许可证
 
