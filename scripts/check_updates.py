@@ -14,7 +14,13 @@ Examples:
 import json
 import sys
 import argparse
+import io
 from pathlib import Path
+
+# Fix Windows console encoding
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass
 from enum import Enum
